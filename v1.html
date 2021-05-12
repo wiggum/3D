@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Version_1</title>
+</head>
+
+<body>
+<style type="text/css">
+		body{
+			margin: 0;
+		}
+		#webgl{
+			width: 100vw;
+			height: 100vh;
+			display: block;
+		}
+		#slidebar{
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+			font-family: monospace;
+			width: 0px;
+		}
+		#slidebar p{
+			display: flex;
+			align-items: center;
+			float: right;
+			margin: 0;
+			height: 2em;
+		}
+		#slidebar p span{
+			display: block;
+			min-width: 3em;
+		}
+		#slidebar p input{
+			margin: 0 0.8em 0;
+		}
+
+	</style>
+	<canvas id="webgl">
+		Please use a browser that supports "canvas"
+	</canvas>
+	
+	<div id="slidebar">
+		<p>x
+		<input id="x" type="range" min="0" >
+		<span id="xdisp"></span>
+		</p>
+		<p>y
+		<input id="y" type="range" min="0">
+		<span id="ydisp"></span>
+		</p>
+		<p>angle
+		<input id="angle" type="range" min="0" max="360">
+		<span id="angdisp"></span>
+		</p>
+		<p>scaleX
+		<input id="scaleX" type="range" min="-5" max="5">
+		<span id="scalexdisp"></span>
+		</p>
+		<p>scaleY
+		<input id="scaleY" type="range" min="-5" max="5">
+		<span id="scaleydisp"></span>
+		</p>
+	</div>
+	
+	<script src="lib/webgl-utils.js"></script>
+	<script src="lib/webgl-debug.js"></script>
+	<script src="lib/cuon-utils.js"></script>
+	<script src="lib/cuon-matrix.js"></script>
+	<script src="v1.js"></script>
+	
+</body>
+</html>
