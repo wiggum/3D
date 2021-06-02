@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>V3</title>
+</head>
+
+<body>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		#webgl{
+			width: 100vw;
+			height: 100vh;
+			display: block;
+		}
+		button{
+			position: absolute;
+			top: 50px;
+			right: 50px;
+			width: 100px;
+		}
+		#slidebar{
+			position: absolute;
+			top: 80px;
+			right: 30px;
+			text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+			font-family: monospace;
+			max-width: min-content;
+		}
+		#slidebar p{
+			display: flex;
+			align-items: center;
+			float: right;
+			margin: 0;
+			height: 2em;
+		}
+		#slidebar p span{
+			display: block;
+			min-width: max-content;
+		}
+		#slidebar p input{
+			margin: 0 0.8em 0;
+		}
+		#cb-image, #pintex, #pl-image{
+			display: none;
+		}
+	</style>
+	<canvas id="webgl" width="400" height="400">
+		Please use a browser that supports "canvas"
+	</canvas>
+	<button type="button" id="proj" value="p">Perspective</button>
+	<div id="slidebar">
+		<p>
+		<span>Positional light</span>
+		<input id="positional" type="range" min="0" max="1" step="0.05" value="0.8" >
+		</p>
+		
+		<p>
+		<span>Positional light X</span>
+		<input id="positional_x" type="range" min="-10" max="10" step="0.05" value="-5" >
+		</p>
+		<p>
+		<span>Positional light Y</span>
+		<input id="positional_y" type="range" min="5" max="10" step="0.05" value="10" >
+		</p>
+		<p>
+		<span>Positional light Z</span>
+		<input id="positional_z" type="range" min="-10" max="10" step="0.05" value="10" >
+		</p>
+		
+		<p>
+		<span>Ambient light</span>
+		<input id="ambient" type="range" min="0" max="1" step="0.05" value="0.2">
+		</p>
+	</div>
+	<img id="cb-image" src="images/cb1.png"></img>
+	<img id="pl-image" src="images/pl.jpg"></img>
+	
+	<script src="lib/webgl-utils.js"></script>
+	<script src="lib/webgl-debug.js"></script>
+	<script src="lib/cuon-utils.js"></script>
+	<script src="lib/cuon-matrix.js"></script>
+	<script src="lib/obj-parser.js"></script>
+	<script src="V3.js"></script>
+</body>
+</html>
